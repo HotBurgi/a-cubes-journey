@@ -15,7 +15,7 @@ var target_node: Node2D
 func _ready():
 	# Start with the current zoom
 	target_zoom = zoom
-	target_node = get_node(do the player here)
+	target_node = get_node(follow_target)
 
 func _process(delta: float) -> void:
 	# --- Zoom Control (Q/E) ---

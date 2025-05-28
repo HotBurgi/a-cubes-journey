@@ -66,7 +66,4 @@ script = ExtResource("3_btd2o")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
 script = ExtResource("1_t0h8o")
-zoom_speed = null
-min_zoom = null
-max_zoom = null
-zoom_lerp_speed = null
+follow_target = NodePath("..")
