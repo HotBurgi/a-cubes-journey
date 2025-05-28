@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7dewqk1md466"]
 
-[ext_resource type="Script" uid="uid://4626jmmijwit" path="res://scripts/camera_2d.gd" id="1_t0h8o"]
-[ext_resource type="Texture2D" uid="uid://2iv13ag3xin1" path="res://Player_sprite.png" id="2_a67vy"]
-[ext_resource type="Script" uid="uid://d04feypiqup2m" path="res://scripts/player.gd" id="3_btd2o"]
+[ext_resource type="Script" uid="uid://4626jmmijwit" path="res://scripts/camera_2d.gd" id="1_yc1o2"]
+[ext_resource type="Texture2D" uid="uid://2iv13ag3xin1" path="res://imgs/Player_sprite.png" id="2_b6jnj"]
+[ext_resource type="Script" uid="uid://d04feypiqup2m" path="res://scripts/player.gd" id="3_tug13"]
 
 [sub_resource type="GDScript" id="GDScript_gnasd"]
 script/source = "extends Node2D
@@ -55,12 +55,12 @@ func _ready():
 [node name="Origin" type="Node2D"]
 script = SubResource("GDScript_gnasd")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+script = ExtResource("1_yc1o2")
+follow_target = NodePath("../Player")
+
 [node name="Player" type="Sprite2D" parent="."]
 z_index = 1
-texture = ExtResource("2_a67vy")
-script = ExtResource("3_btd2o")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
-script = ExtResource("1_t0h8o")
-follow_target = NodePath("..")
+texture = ExtResource("2_b6jnj")
+script = ExtResource("3_tug13")

@@ -34,6 +34,6 @@ func checkCollision(x, y):
 	#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
 	var map = GlobalVariables.maps[0]
 	# check collision
-	if(map[x][y] != 0 or map[x][y]==2):   # non dovremmo tenere 2 per le porte, le porte metti 0, non serve a nulla
+	if(map[x][y] != 0 and map[x][y]!=2):   # non dovremmo tenere 2 per le porte, le porte metti 0, non serve a nulla
 		return false
 	return true

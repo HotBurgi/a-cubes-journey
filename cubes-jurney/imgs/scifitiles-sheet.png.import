@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2iv13ag3xin1"
-path="res://.godot/imported/Player_sprite.png-bee011f05c7b6f802511a034d956f4be.ctex"
+uid="uid://hg0o2jmott6u"
+path="res://.godot/imported/scifitiles-sheet.png-737630be2be535102849b808f0182eb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player_sprite.png"
-dest_files=["res://.godot/imported/Player_sprite.png-bee011f05c7b6f802511a034d956f4be.ctex"]
+source_file="res://imgs/scifitiles-sheet.png"
+dest_files=["res://.godot/imported/scifitiles-sheet.png-737630be2be535102849b808f0182eb9.ctex"]
 
 [params]
 
