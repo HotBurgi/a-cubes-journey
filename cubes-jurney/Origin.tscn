@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7dewqk1md466"]
 
-[ext_resource type="Script" uid="uid://4626jmmijwit" path="res://camera_2d.gd" id="1_t0h8o"]
+[ext_resource type="Script" uid="uid://4626jmmijwit" path="res://scripts/camera_2d.gd" id="1_t0h8o"]
 [ext_resource type="Texture2D" uid="uid://2iv13ag3xin1" path="res://Player_sprite.png" id="2_a67vy"]
-[ext_resource type="Script" uid="uid://d04feypiqup2m" path="res://player.gd" id="3_btd2o"]
+[ext_resource type="Script" uid="uid://d04feypiqup2m" path="res://scripts/player.gd" id="3_btd2o"]
 
 [sub_resource type="GDScript" id="GDScript_gnasd"]
 script/source = "extends Node2D
@@ -23,10 +23,7 @@ func generateMapPaths():
 					[\"\", \"\", \"\"],
 					[\"empty\", \"boss\", \"empty\"]
 					]
-	print(len(GlobalVariables.MAP))
-	print(len(path_map))
-	print(len(GlobalVariables.MAP[0]))
-	print(len(path_map[0]))
+
 	for i in range(len(path_map)):
 		for j in range(len(path_map[0])):
 			if GlobalVariables.MAP[i][j] == -2:

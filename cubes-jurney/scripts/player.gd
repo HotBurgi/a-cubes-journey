@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var wait_timer := 0.0
-var rel_pos = Vector2.ZERO
+var rel_pos = Vector2(5,5)
 var curr_room = Vector2(0, 1)
 
 const MOVE_INTERVAL := 0.2  # Seconds between moves (adjust as needed)
@@ -34,5 +34,6 @@ func checkCollision(x, y):
 	#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
 	var map = GlobalVariables.maps[0]
 	# check collision
-
+	if(map[x][y] != 0 or map[x][y]==2):   # non dovremmo tenere 2 per le porte, le porte metti 0, non serve a nulla
+		return false
 	return true
