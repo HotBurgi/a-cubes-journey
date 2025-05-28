@@ -31,7 +31,8 @@ func _process(delta: float) -> void:
 
 
 func checkCollision(x, y):
+	#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
+	var map = GlobalVariables.maps[0]
+	# check collision
 
-	var map = global map get Vector2
-	
-	
+	return true

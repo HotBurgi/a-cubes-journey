@@ -5,6 +5,21 @@ var ROOM_SIDE = ROOM_TILE * 11
 var MAP_WIDTH = ROOM_SIDE * 3 # 3 rooms
 var MAP_EIGHT = ROOM_SIDE * 5 # 5 rooms
 
+# 0 to be filled
+# -1 empty
+# -2 bossetti
+# -3 spawn
+# Bisogna mettere i numeri per tipo di stanza in base alla posizione nell'array di mappe in globalvars
+
+var MAP = [	[-1, -3, -1],
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0],
+			[-1, -2, -1]
+			]
+
 # 0 pavimento, 1 muri, 2 porte
 var maps = [
 	[ # map 1
