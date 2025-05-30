@@ -11,7 +11,7 @@ var MAP_EIGHT = ROOM_SIDE * 5 # 5 rooms
 # 1 spawn
 # Bisogna mettere i numeri per tipo di stanza in base alla posizione nell'array di mappe in globalvars
 
-var MAP = [	[-1, 1, -1],
+var MAP = [	[0, 1, 0],
 			[0, 0, 0],
 			[0, 0, 0],
 			[0, 0, 0],
