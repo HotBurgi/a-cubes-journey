@@ -19,31 +19,35 @@ func _process(delta: float) -> void:
 			if curr_tile == 7:
 				rel_pos.x = -1
 				curr_room.y += 1
-				#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				var map = GlobalVariables.maps[0]
+				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
+				#var map = GlobalVariables.maps[0]
 			movement.x += 32
 			rel_pos.x += 1
 			wait_timer = MOVE_INTERVAL
 		elif Input.is_action_pressed("ui_left") and checkCollision(rel_pos.x-1, rel_pos.y):
-			if curr_tile == 9: # Metti giusto
+			if curr_tile == 9:
 				rel_pos.x = 11
 				curr_room.y -= 1
-				#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				var map = GlobalVariables.maps[0]
+				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
+				#var map = GlobalVariables.maps[0]
 			movement.x -= 32
 			rel_pos.x -= 1
 			wait_timer = MOVE_INTERVAL
 		elif Input.is_action_pressed("ui_down") and checkCollision(rel_pos.x, rel_pos.y+1):
-			if curr_tile == 8: # Metti giusto
-				rel_pos = Vector2(0,0) # Metti le coordinate giuste
-				#aggiorna var map copia incollando il commento sopra (lascialo commentato anche qui)
+			if curr_tile == 8:
+				rel_pos.y = -1
+				curr_room.x += 1 
+				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
+				#var map = GlobalVariables.maps[0]
 			movement.y += 32
 			rel_pos.y += 1
 			wait_timer = MOVE_INTERVAL
 		elif Input.is_action_pressed("ui_up") and checkCollision(rel_pos.x, rel_pos.y-1):
-			if curr_tile == 6: # Metti giusto
-				rel_pos = Vector2(0,0) # Metti le coordinate giuste
-				#aggiorna var map copia incollando il commento sopra (lascialo commentato anche qui)
+			if curr_tile == 6:
+				rel_pos.y = 11
+				curr_room.x -= 1
+				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
+				#var map = GlobalVariables.maps[0]
 			movement.y -= 32
 			rel_pos.y -= 1
 			wait_timer = MOVE_INTERVAL
