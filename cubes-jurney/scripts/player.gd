@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		elif Input.is_action_pressed("ui_down") and checkCollision(rel_pos.x, rel_pos.y+1):
 			if curr_tile == 8:
 				rel_pos.y = -1
-				curr_room.x += 1 
+				curr_room.x -= 1 
 				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
 				#var map = GlobalVariables.maps[0]
 			movement.y += 32
@@ -45,14 +45,14 @@ func _process(delta: float) -> void:
 		elif Input.is_action_pressed("ui_up") and checkCollision(rel_pos.x, rel_pos.y-1):
 			if curr_tile == 6:
 				rel_pos.y = 11
-				curr_room.x -= 1
+				curr_room.x += 1
 				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
 				#var map = GlobalVariables.maps[0]
 			movement.y -= 32
 			rel_pos.y -= 1
 			wait_timer = MOVE_INTERVAL
 
-	print(rel_pos.x, " - ", rel_pos.y)
+	print(curr_room.x, " - ", curr_room.y)
 	position += movement
 	curr_tile = map[rel_pos.x][rel_pos.y]
 	wait_timer -= delta
