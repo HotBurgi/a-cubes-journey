@@ -4,8 +4,7 @@ var wait_timer := 0.0
 var rel_pos = Vector2(5,5)
 var curr_room = Vector2(0, 1)
 
-#var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-var map = GlobalVariables.maps[0]
+var map = GlobalVariables.maps[GlobalVariables.MAP[curr_room.x][curr_room.y]]
 
 var curr_tile = map[rel_pos.x][rel_pos.y]
 
@@ -19,8 +18,6 @@ func _process(delta: float) -> void:
 			if curr_tile == 7:
 				rel_pos.x = -1
 				curr_room.y += 1
-				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				#var map = GlobalVariables.maps[0]
 			movement.x += 32
 			rel_pos.x += 1
 			wait_timer = MOVE_INTERVAL
@@ -28,8 +25,6 @@ func _process(delta: float) -> void:
 			if curr_tile == 9:
 				rel_pos.x = 11
 				curr_room.y -= 1
-				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				#var map = GlobalVariables.maps[0]
 			movement.x -= 32
 			rel_pos.x -= 1
 			wait_timer = MOVE_INTERVAL
@@ -37,8 +32,6 @@ func _process(delta: float) -> void:
 			if curr_tile == 8:
 				rel_pos.y = -1
 				curr_room.x -= 1 
-				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				#var map = GlobalVariables.maps[0]
 			movement.y += 32
 			rel_pos.y += 1
 			wait_timer = MOVE_INTERVAL
@@ -46,22 +39,20 @@ func _process(delta: float) -> void:
 			if curr_tile == 6:
 				rel_pos.y = 11
 				curr_room.x += 1
-				var map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-				#var map = GlobalVariables.maps[0]
 			movement.y -= 32
 			rel_pos.y -= 1
 			wait_timer = MOVE_INTERVAL
-
-	print(curr_room.x, " - ", curr_room.y)
+			
 	position += movement
 	curr_tile = map[rel_pos.x][rel_pos.y]
+	print(curr_room)
+	var map = GlobalVariables.maps[GlobalVariables.MAP[curr_room.x][curr_room.y]] # Where tf does 5 come from, even printing shows regular values
 	wait_timer -= delta
 
 func checkCollision(x, y):
 	x = int(x) % 11
 	y = int(y) % 11
-	#map = GlobalVariables.maps[GlobalVariables[curr_room.x][curr_room.y]]
-	map = GlobalVariables.maps[0]
+	map = GlobalVariables.maps[GlobalVariables.MAP[curr_room.x][curr_room.y]]
 	# check collision
 	if(map[x][y] != 0 and !(map[x][y] >= 6 and map[x][y] <= 9)):
 		return false
