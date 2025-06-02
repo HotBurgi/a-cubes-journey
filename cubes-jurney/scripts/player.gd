@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 			
 	position += movement
 	curr_tile = map[rel_pos.x][rel_pos.y]
-	var map = GlobalVariables.maps[GlobalVariables.MAP[curr_room.x][curr_room.y]] # Where tf does 5 come from, even printing shows regular values
+	var map = GlobalVariables.maps[GlobalVariables.MAP[curr_room.x][curr_room.y]]
 	wait_timer -= delta
 
 func checkCollision(x, y):

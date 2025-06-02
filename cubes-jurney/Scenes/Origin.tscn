@@ -14,6 +14,9 @@ func generateMap():
 		for j in range(len(GlobalVariables.MAP[0])):
 			if GlobalVariables.MAP[i][j] >= 0:
 				GlobalVariables.MAP[i][j] = randi() % 5 + 1
+				
+	# DEBUG
+	GlobalVariables.MAP[6][1] = 2
 
 # FIXME: 	Why do we even do this?? Magari usiamo solo numeri e facciamo prima, che c'e' gia un mega
 #			if per vedere se sta al centro, in alto a sinistra, a destra in centro etc...
@@ -32,12 +35,14 @@ func generateMapPaths():
 
 	for i in range(len(path_map)):
 		for j in range(len(path_map[0])):
-			if GlobalVariables.MAP[i][j] == -2:
+			if GlobalVariables.MAP[i][j] == 2:
 				path_map[i][j] = \"res://rooms/boss_room.tscn\"
-			if GlobalVariables.MAP[i][j] == -3: #tudù
+				print(\"DENTRO IF > \", path_map)
+			elif GlobalVariables.MAP[i][j] == -3: #TODO
 				path_map[i][j] = \"res://rooms/boss_room.tscn\"
-			if GlobalVariables.MAP[i][j] > 0:
+			else:
 				path_map[i][j] = \"res://rooms/room_\" + str(GlobalVariables.MAP[i][j]) + \".tscn\"
+			print(\"FUORI IF > \", path_map)
 	return path_map
 
 func _ready():
@@ -56,6 +61,7 @@ func _ready():
 					add_child(room_instance)
 					rooms.append(room_instance)
 	print(\"Scene loaded\")
+	print(GlobalVariables.MAP)
 "
 
 [node name="Origin" type="Node2D"]
