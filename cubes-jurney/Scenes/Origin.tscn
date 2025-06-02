@@ -7,12 +7,18 @@
 [sub_resource type="GDScript" id="GDScript_gnasd"]
 script/source = "extends Node2D
 
+#TODO: fare 9 tipi di mappa default, per ogni bordo, tipo angoli e anche il centro (che c'e' gia')
+
 func generateMap():
 	for i in range(len(GlobalVariables.MAP)):
 		for j in range(len(GlobalVariables.MAP[0])):
 			if GlobalVariables.MAP[i][j] >= 0:
 				GlobalVariables.MAP[i][j] = randi() % 5 + 1
 
+# FIXME: 	Why do we even do this?? Magari usiamo solo numeri e facciamo prima, che c'e' gia un mega
+#			if per vedere se sta al centro, in alto a sinistra, a destra in centro etc...
+#			Per il nome dei file .tscn direi di fare room_1_S, room_0_NE, room_2_W, room_3_SW
+#			path_map[i][j] = \"res://rooms/room_\" + GlobalVariables.MAP[i][j] + ?GlobalVariables.EDGE[i][j]? + \".tscn\"
 func generateMapPaths():
 	generateMap()
 	var path_map = [[\"empty\", \"spawn\", \"empty\"],

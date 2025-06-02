@@ -5,6 +5,7 @@ var ROOM_SIDE = ROOM_TILE * 11
 var MAP_WIDTH = ROOM_SIDE * 3 # 3 rooms
 var MAP_EIGHT = ROOM_SIDE * 5 # 5 rooms
 
+# TODO:
 # 0 to be filled
 # -1 empty
 # 2 bossetti
@@ -20,7 +21,7 @@ var MAP = [	[-1, 1, -1],
 			[-1, 2, -1]
 			]
 
-# 0 pavimento, 1 muri, 2 porte # 9 kanye 8 south 7 east 6 north
+# FIXME: 0 pavimento, 1 muri, 2 porte # 9 kanye 8 south 7 east 6 north
 var maps = [
 	[ # map 0
 	[1, 1, 1, 1, 9, 9, 9, 1, 1, 1, 1],
