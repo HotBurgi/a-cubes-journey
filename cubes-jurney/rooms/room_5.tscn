@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://br71aor4bonyr"]
+[gd_scene load_steps=4 format=4 uid="uid://cle6dcq3pc6jm"]
 
-[ext_resource type="Texture2D" uid="uid://hg0o2jmott6u" path="res://imgs/scifitiles-sheet.png" id="1_5cfj0"]
+[ext_resource type="Texture2D" uid="uid://hg0o2jmott6u" path="res://imgs/scifitiles-sheet.png" id="1_kvcho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_voqw3"]
-texture = ExtResource("1_5cfj0")
+texture = ExtResource("1_kvcho")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
