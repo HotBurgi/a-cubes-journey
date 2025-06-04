@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://clpcdm33scyj2"]
+
+[ext_resource type="PackedScene" uid="uid://bs7l3a1wbth74" path="res://Scenes/Enemies/base_enemy.tscn" id="1_pm73l"]
+[ext_resource type="Texture2D" uid="uid://bfhyvkfikudyc" path="res://imgs/sprites/low_pyramid.png" id="2_u7e3w"]
+
+[node name="BaseEnemy" instance=ExtResource("1_pm73l")]
+enemy_name = "Lil Pyramid"
+max_health = 60
+skills = Array[Dictionary]([{
+"damage": 12,
+"name": "Jab Edge"
+}, {
+"damage": 5,
+"name": "Sand Spray"
+}, {
+"damage": 2,
+"name": "Desert Mirage"
+}])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_u7e3w")

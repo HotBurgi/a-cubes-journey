@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://btckds1ecokoc"]
+
+[ext_resource type="PackedScene" uid="uid://bs7l3a1wbth74" path="res://Scenes/Enemies/base_enemy.tscn" id="1_a0f1h"]
+[ext_resource type="Texture2D" uid="uid://bwrohs8iitolv" path="res://imgs/sprites/cilinder.png" id="2_mgb62"]
+
+[node name="BaseEnemy" instance=ExtResource("1_a0f1h")]
+enemy_name = "Cilinder"
+max_health = 90
+skills = Array[Dictionary]([{
+"damage": 30,
+"name": "Drill Pierce"
+}, {
+"damage": 20,
+"name": "Tilt Tumble"
+}, {
+"damage": 15,
+"name": "Steady Block"
+}])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_mgb62")

@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@export var healt: int = 100
+
 var wait_timer := 0.0
 var rel_pos = Vector2(5,5)
 var curr_room = Vector2(0, 1)

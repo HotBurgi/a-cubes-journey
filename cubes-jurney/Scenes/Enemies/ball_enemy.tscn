@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwqv7oa8cuffi"]
+
+[ext_resource type="PackedScene" uid="uid://bs7l3a1wbth74" path="res://Scenes/Enemies/base_enemy.tscn" id="1_fknkv"]
+[ext_resource type="Texture2D" uid="uid://blwuol60fafyt" path="res://imgs/sprites/ball.png" id="2_s8yyn"]
+
+[node name="BaseEnemy" instance=ExtResource("1_fknkv")]
+enemy_name = "Ball"
+max_health = 120
+skills = Array[Dictionary]([{
+"damage": 25,
+"name": "Bounce Slam"
+}, {
+"damage": 15,
+"name": "Rolling Crush"
+}, {
+"damage": 10,
+"name": "Hyper Spin"
+}])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_s8yyn")

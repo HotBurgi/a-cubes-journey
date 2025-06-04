@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl2thlwdomgya"]
+
+[ext_resource type="PackedScene" uid="uid://bs7l3a1wbth74" path="res://Scenes/Enemies/base_enemy.tscn" id="1_kuwdn"]
+[ext_resource type="Texture2D" uid="uid://bmx11dsa6irgb" path="res://imgs/sprites/pyramid.png" id="2_5qrf6"]
+
+[node name="BaseEnemy" instance=ExtResource("1_kuwdn")]
+enemy_name = "Pyramid"
+max_health = 150
+skills = Array[Dictionary]([{
+"damage": 35,
+"name": "Apex Strike"
+}, {
+"damage": 10,
+"name": "Sand Trap"
+}, {
+"damage": 20,
+"name": "Pharaoh's Curse"
+}])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_5qrf6")
